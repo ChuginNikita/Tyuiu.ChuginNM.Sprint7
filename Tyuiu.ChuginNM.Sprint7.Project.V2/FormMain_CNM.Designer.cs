@@ -118,14 +118,14 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             groupBoxMathFunc_CNM.Controls.Add(buttonCellSum_CNM);
             groupBoxMathFunc_CNM.Location = new Point(290, 12);
             groupBoxMathFunc_CNM.Name = "groupBoxMathFunc_CNM";
-            groupBoxMathFunc_CNM.Size = new Size(177, 121);
+            groupBoxMathFunc_CNM.Size = new Size(195, 121);
             groupBoxMathFunc_CNM.TabIndex = 2;
             groupBoxMathFunc_CNM.TabStop = false;
             groupBoxMathFunc_CNM.Text = "Математика";
             // 
             // buttonCellMean_CNM
             // 
-            buttonCellMean_CNM.Location = new Point(85, 82);
+            buttonCellMean_CNM.Location = new Point(103, 82);
             buttonCellMean_CNM.Name = "buttonCellMean_CNM";
             buttonCellMean_CNM.Size = new Size(86, 23);
             buttonCellMean_CNM.TabIndex = 3;
@@ -136,7 +136,7 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             // 
             // buttonCellMin_CNM
             // 
-            buttonCellMin_CNM.Location = new Point(85, 53);
+            buttonCellMin_CNM.Location = new Point(103, 53);
             buttonCellMin_CNM.Name = "buttonCellMin_CNM";
             buttonCellMin_CNM.Size = new Size(86, 23);
             buttonCellMin_CNM.TabIndex = 2;
@@ -147,7 +147,7 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             // 
             // buttonCellMax_CNM
             // 
-            buttonCellMax_CNM.Location = new Point(85, 24);
+            buttonCellMax_CNM.Location = new Point(103, 24);
             buttonCellMax_CNM.Name = "buttonCellMax_CNM";
             buttonCellMax_CNM.Size = new Size(86, 23);
             buttonCellMax_CNM.TabIndex = 1;
@@ -160,7 +160,7 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             // 
             buttonCellSum_CNM.Location = new Point(6, 24);
             buttonCellSum_CNM.Name = "buttonCellSum_CNM";
-            buttonCellSum_CNM.Size = new Size(73, 81);
+            buttonCellSum_CNM.Size = new Size(91, 81);
             buttonCellSum_CNM.TabIndex = 0;
             buttonCellSum_CNM.Text = "Сумма ячеек";
             toolTipHelper_CNM.SetToolTip(buttonCellSum_CNM, "Находит сумму чисел в выделенных ячейках");
@@ -188,6 +188,7 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             buttonHelp_CNM.TabIndex = 2;
             buttonHelp_CNM.TextAlign = ContentAlignment.BottomCenter;
             buttonHelp_CNM.UseVisualStyleBackColor = true;
+            buttonHelp_CNM.Click += ButtonHelp_CNM_Click;
             // 
             // dataGridViewOutput_CNM
             // 
@@ -205,6 +206,7 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             textBoxCellCount_CNM.BorderStyle = BorderStyle.None;
             textBoxCellCount_CNM.Location = new Point(12, 607);
             textBoxCellCount_CNM.Name = "textBoxCellCount_CNM";
+            textBoxCellCount_CNM.ReadOnly = true;
             textBoxCellCount_CNM.Size = new Size(572, 16);
             textBoxCellCount_CNM.TabIndex = 5;
             textBoxCellCount_CNM.TextAlign = HorizontalAlignment.Right;

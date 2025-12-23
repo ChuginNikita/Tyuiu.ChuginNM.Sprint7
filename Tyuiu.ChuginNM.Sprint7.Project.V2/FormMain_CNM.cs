@@ -79,6 +79,13 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
         {
             CellMinMax(dataGridViewOutput_CNM, "max");
         }
+        
+        private void ButtonHelp_CNM_Click(object sender, EventArgs e)
+        {
+            FormAbout_CNM run = new FormAbout_CNM();
+            run.ShowDialog();
+            run.Close();
+        }
 
         private void DataGridViewOutput_CNM_SelectionChanged(object sender, EventArgs e)
         {
@@ -439,7 +446,7 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
                            "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void MeanCellValue(DataGridView dataGridView)
+        public void MeanCellValue(DataGridView dataGridView) // Среднее значение
         {
             if (dataGridView.SelectedCells.Count == 0)
                 return;

@@ -99,5 +99,15 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinning_fish {
+            get {
+                object obj = ResourceManager.GetObject("spinning-fish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

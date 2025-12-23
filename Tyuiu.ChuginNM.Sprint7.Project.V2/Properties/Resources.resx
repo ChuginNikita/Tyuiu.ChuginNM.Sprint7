@@ -121,13 +121,16 @@
   <data name="icons8-save-file-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons8-save-file-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-spreadsheet-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons8-spreadsheet-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-documents-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons8-documents-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-search-folder-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons8-search-folder-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-spreadsheet-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons8-spreadsheet-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spinning-fish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spinning-fish.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
