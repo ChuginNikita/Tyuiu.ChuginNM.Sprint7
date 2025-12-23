@@ -1,4 +1,7 @@
-﻿namespace Tyuiu.ChuginNM.Sprint7.Project.V2
+﻿using System.Windows.Forms.DataVisualization.Charting;
+using System.Windows.Forms.DataVisualization;
+
+namespace Tyuiu.ChuginNM.Sprint7.Project.V2
 {
     partial class FormMain_CNM
     {
@@ -28,30 +31,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain_CNM));
             groupBoxControl_CNM = new GroupBox();
+            buttonCreateFile_CNM = new Button();
             buttonSaveFile_CNM = new Button();
             buttonOpenFile_CNM = new Button();
-            groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
+            groupBoxMathFunc_CNM = new GroupBox();
+            buttonCellMean_CNM = new Button();
+            buttonCellMin_CNM = new Button();
+            buttonCellMax_CNM = new Button();
+            buttonCellSum_CNM = new Button();
+            groupBoxHelp_CNM = new GroupBox();
+            buttonHelp_CNM = new Button();
+            dataGridViewOutput_CNM = new DataGridView();
+            toolTipHelper_CNM = new ToolTip(components);
+            textBoxCellCount_CNM = new TextBox();
             groupBoxControl_CNM.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBoxMathFunc_CNM.SuspendLayout();
+            groupBoxHelp_CNM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOutput_CNM).BeginInit();
             SuspendLayout();
             // 
             // groupBoxControl_CNM
             // 
-            groupBoxControl_CNM.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            groupBoxControl_CNM.AutoSize = true;
+            groupBoxControl_CNM.Controls.Add(buttonCreateFile_CNM);
             groupBoxControl_CNM.Controls.Add(buttonSaveFile_CNM);
             groupBoxControl_CNM.Controls.Add(buttonOpenFile_CNM);
             groupBoxControl_CNM.Location = new Point(12, 12);
             groupBoxControl_CNM.Name = "groupBoxControl_CNM";
-            groupBoxControl_CNM.Size = new Size(178, 121);
+            groupBoxControl_CNM.Size = new Size(272, 121);
             groupBoxControl_CNM.TabIndex = 0;
             groupBoxControl_CNM.TabStop = false;
             groupBoxControl_CNM.Text = "Управление";
+            // 
+            // buttonCreateFile_CNM
+            // 
+            buttonCreateFile_CNM.AutoSize = true;
+            buttonCreateFile_CNM.BackgroundImage = (Image)resources.GetObject("buttonCreateFile_CNM.BackgroundImage");
+            buttonCreateFile_CNM.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonCreateFile_CNM.ImageAlign = ContentAlignment.TopCenter;
+            buttonCreateFile_CNM.Location = new Point(91, 22);
+            buttonCreateFile_CNM.Name = "buttonCreateFile_CNM";
+            buttonCreateFile_CNM.Size = new Size(81, 77);
+            buttonCreateFile_CNM.TabIndex = 2;
+            buttonCreateFile_CNM.TextAlign = ContentAlignment.BottomCenter;
+            toolTipHelper_CNM.SetToolTip(buttonCreateFile_CNM, "Создать новую таблицу");
+            buttonCreateFile_CNM.UseVisualStyleBackColor = true;
+            buttonCreateFile_CNM.Click += ButtonCreateFile_CNM_Click;
             // 
             // buttonSaveFile_CNM
             // 
@@ -59,12 +86,14 @@
             buttonSaveFile_CNM.BackgroundImage = Properties.Resources.icons8_save_file_100;
             buttonSaveFile_CNM.BackgroundImageLayout = ImageLayout.Stretch;
             buttonSaveFile_CNM.ImageAlign = ContentAlignment.TopCenter;
-            buttonSaveFile_CNM.Location = new Point(91, 22);
+            buttonSaveFile_CNM.Location = new Point(178, 22);
             buttonSaveFile_CNM.Name = "buttonSaveFile_CNM";
             buttonSaveFile_CNM.Size = new Size(81, 77);
             buttonSaveFile_CNM.TabIndex = 1;
             buttonSaveFile_CNM.TextAlign = ContentAlignment.BottomCenter;
+            toolTipHelper_CNM.SetToolTip(buttonSaveFile_CNM, "Сохранить файл");
             buttonSaveFile_CNM.UseVisualStyleBackColor = true;
+            buttonSaveFile_CNM.Click += ButtonSaveFile_CNM_Click;
             // 
             // buttonOpenFile_CNM
             // 
@@ -77,68 +106,134 @@
             buttonOpenFile_CNM.TabIndex = 0;
             buttonOpenFile_CNM.TextAlign = ContentAlignment.BottomCenter;
             buttonOpenFile_CNM.TextImageRelation = TextImageRelation.ImageAboveText;
+            toolTipHelper_CNM.SetToolTip(buttonOpenFile_CNM, "Открыть файл");
             buttonOpenFile_CNM.UseVisualStyleBackColor = true;
+            buttonOpenFile_CNM.Click += ButtonOpenFile_CNM_Click;
             // 
-            // groupBox1
+            // groupBoxMathFunc_CNM
             // 
-            groupBox1.AutoSize = true;
-            groupBox1.Location = new Point(196, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(919, 121);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Функционал";
+            groupBoxMathFunc_CNM.Controls.Add(buttonCellMean_CNM);
+            groupBoxMathFunc_CNM.Controls.Add(buttonCellMin_CNM);
+            groupBoxMathFunc_CNM.Controls.Add(buttonCellMax_CNM);
+            groupBoxMathFunc_CNM.Controls.Add(buttonCellSum_CNM);
+            groupBoxMathFunc_CNM.Location = new Point(290, 12);
+            groupBoxMathFunc_CNM.Name = "groupBoxMathFunc_CNM";
+            groupBoxMathFunc_CNM.Size = new Size(177, 121);
+            groupBoxMathFunc_CNM.TabIndex = 2;
+            groupBoxMathFunc_CNM.TabStop = false;
+            groupBoxMathFunc_CNM.Text = "Математика";
             // 
-            // groupBox2
+            // buttonCellMean_CNM
             // 
-            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox2.AutoSize = true;
-            groupBox2.Controls.Add(button1);
-            groupBox2.Location = new Point(1121, 12);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(93, 121);
-            groupBox2.TabIndex = 3;
-            groupBox2.TabStop = false;
+            buttonCellMean_CNM.Location = new Point(85, 82);
+            buttonCellMean_CNM.Name = "buttonCellMean_CNM";
+            buttonCellMean_CNM.Size = new Size(86, 23);
+            buttonCellMean_CNM.TabIndex = 3;
+            buttonCellMean_CNM.Text = "Ср. Знач.";
+            toolTipHelper_CNM.SetToolTip(buttonCellMean_CNM, "Находит среднее арифметическое выделенных ячеек.");
+            buttonCellMean_CNM.UseVisualStyleBackColor = true;
+            buttonCellMean_CNM.Click += ButtonCellMean_CNM_Click;
             // 
-            // button1
+            // buttonCellMin_CNM
             // 
-            button1.AutoSize = true;
-            button1.BackgroundImage = Properties.Resources.icons8_documents_100;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(6, 22);
-            button1.Name = "button1";
-            button1.Size = new Size(81, 77);
-            button1.TabIndex = 2;
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = true;
+            buttonCellMin_CNM.Location = new Point(85, 53);
+            buttonCellMin_CNM.Name = "buttonCellMin_CNM";
+            buttonCellMin_CNM.Size = new Size(86, 23);
+            buttonCellMin_CNM.TabIndex = 2;
+            buttonCellMin_CNM.Text = "Минимум";
+            toolTipHelper_CNM.SetToolTip(buttonCellMin_CNM, "Находит минимальное число в выделенных ячейках");
+            buttonCellMin_CNM.UseVisualStyleBackColor = true;
+            buttonCellMin_CNM.Click += ButtonCellMin_CNM_Click;
             // 
-            // dataGridView1
+            // buttonCellMax_CNM
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 139);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(474, 462);
-            dataGridView1.TabIndex = 4;
+            buttonCellMax_CNM.Location = new Point(85, 24);
+            buttonCellMax_CNM.Name = "buttonCellMax_CNM";
+            buttonCellMax_CNM.Size = new Size(86, 23);
+            buttonCellMax_CNM.TabIndex = 1;
+            buttonCellMax_CNM.Text = "Максимум";
+            toolTipHelper_CNM.SetToolTip(buttonCellMax_CNM, "Находит максимальное число в выделенных ячейках");
+            buttonCellMax_CNM.UseVisualStyleBackColor = true;
+            buttonCellMax_CNM.Click += ButtonCellMax_CNM_Click;
+            // 
+            // buttonCellSum_CNM
+            // 
+            buttonCellSum_CNM.Location = new Point(6, 24);
+            buttonCellSum_CNM.Name = "buttonCellSum_CNM";
+            buttonCellSum_CNM.Size = new Size(73, 81);
+            buttonCellSum_CNM.TabIndex = 0;
+            buttonCellSum_CNM.Text = "Сумма ячеек";
+            toolTipHelper_CNM.SetToolTip(buttonCellSum_CNM, "Находит сумму чисел в выделенных ячейках");
+            buttonCellSum_CNM.UseVisualStyleBackColor = true;
+            buttonCellSum_CNM.Click += ButtonCellSum_CNM_Click;
+            // 
+            // groupBoxHelp_CNM
+            // 
+            groupBoxHelp_CNM.Controls.Add(buttonHelp_CNM);
+            groupBoxHelp_CNM.Location = new Point(491, 12);
+            groupBoxHelp_CNM.Name = "groupBoxHelp_CNM";
+            groupBoxHelp_CNM.Size = new Size(93, 121);
+            groupBoxHelp_CNM.TabIndex = 3;
+            groupBoxHelp_CNM.TabStop = false;
+            // 
+            // buttonHelp_CNM
+            // 
+            buttonHelp_CNM.AutoSize = true;
+            buttonHelp_CNM.BackgroundImage = Properties.Resources.icons8_documents_100;
+            buttonHelp_CNM.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonHelp_CNM.ImageAlign = ContentAlignment.TopCenter;
+            buttonHelp_CNM.Location = new Point(6, 22);
+            buttonHelp_CNM.Name = "buttonHelp_CNM";
+            buttonHelp_CNM.Size = new Size(81, 77);
+            buttonHelp_CNM.TabIndex = 2;
+            buttonHelp_CNM.TextAlign = ContentAlignment.BottomCenter;
+            buttonHelp_CNM.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewOutput_CNM
+            // 
+            dataGridViewOutput_CNM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewOutput_CNM.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOutput_CNM.Location = new Point(12, 139);
+            dataGridViewOutput_CNM.Name = "dataGridViewOutput_CNM";
+            dataGridViewOutput_CNM.Size = new Size(572, 462);
+            dataGridViewOutput_CNM.TabIndex = 4;
+            dataGridViewOutput_CNM.SelectionChanged += DataGridViewOutput_CNM_SelectionChanged;
+            // 
+            // textBoxCellCount_CNM
+            // 
+            textBoxCellCount_CNM.BackColor = SystemColors.Control;
+            textBoxCellCount_CNM.BorderStyle = BorderStyle.None;
+            textBoxCellCount_CNM.Location = new Point(12, 607);
+            textBoxCellCount_CNM.Name = "textBoxCellCount_CNM";
+            textBoxCellCount_CNM.Size = new Size(572, 16);
+            textBoxCellCount_CNM.TabIndex = 5;
+            textBoxCellCount_CNM.TextAlign = HorizontalAlignment.Right;
             // 
             // FormMain_CNM
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1226, 613);
-            Controls.Add(dataGridView1);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(602, 645);
+            Controls.Add(textBoxCellCount_CNM);
+            Controls.Add(dataGridViewOutput_CNM);
+            Controls.Add(groupBoxHelp_CNM);
+            Controls.Add(groupBoxMathFunc_CNM);
             Controls.Add(groupBoxControl_CNM);
             Name = "FormMain_CNM";
             Text = "Спринт 7 | Проект | Вариант 2 | Чугин Н.М.";
             groupBoxControl_CNM.ResumeLayout(false);
             groupBoxControl_CNM.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBoxMathFunc_CNM.ResumeLayout(false);
+            groupBoxHelp_CNM.ResumeLayout(false);
+            groupBoxHelp_CNM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOutput_CNM).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void FormMain_CNM_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -146,9 +241,16 @@
         private GroupBox groupBoxControl_CNM;
         private Button buttonOpenFile_CNM;
         private Button buttonSaveFile_CNM;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private Button button1;
-        private DataGridView dataGridView1;
+        private GroupBox groupBoxMathFunc_CNM;
+        private GroupBox groupBoxHelp_CNM;
+        private Button buttonHelp_CNM;
+        private DataGridView dataGridViewOutput_CNM;
+        private Button buttonCreateFile_CNM;
+        private ToolTip toolTipHelper_CNM;
+        private Button buttonCellMin_CNM;
+        private Button buttonCellMax_CNM;
+        private Button buttonCellSum_CNM;
+        private Button buttonCellMean_CNM;
+        private TextBox textBoxCellCount_CNM;
     }
 }

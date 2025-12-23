@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.ChuginNM.Sprint7.Project.V2.Lib", "Tyuiu.ChuginNM.Sprint7.Project.V2.Lib\Tyuiu.ChuginNM.Sprint7.Project.V2.Lib.csproj", "{9FEB9A5F-B011-4790-AB7D-9FE36EAD50BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.ChuginNM.Sprint7.Project.V2", "Tyuiu.ChuginNM.Sprint7.Project.V2\Tyuiu.ChuginNM.Sprint7.Project.V2.csproj", "{5CAF03A3-956D-44D2-9841-BFECDDB43276}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "res", "res", "{78511C84-F2BF-47B9-854F-A7BBC7A3AB3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,7 +30,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9FEB9A5F-B011-4790-AB7D-9FE36EAD50BE} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
 		{5CAF03A3-956D-44D2-9841-BFECDDB43276} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
-		{78511C84-F2BF-47B9-854F-A7BBC7A3AB3D} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69D8FA24-487D-45EE-85C5-41BC2B12E00C}

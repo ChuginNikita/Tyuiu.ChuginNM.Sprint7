@@ -89,5 +89,15 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_spreadsheet_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-spreadsheet-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

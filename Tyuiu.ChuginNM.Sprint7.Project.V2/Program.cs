@@ -1,6 +1,6 @@
 namespace Tyuiu.ChuginNM.Sprint7.Project.V2
 {
-    internal static class Program
+    class Program
     {
         /// <summary>
         ///  The main entry point for the application.
