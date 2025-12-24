@@ -47,18 +47,25 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             dataGridViewOutput_CNM = new DataGridView();
             toolTipHelper_CNM = new ToolTip(components);
             textBoxCellCount_CNM = new TextBox();
+            panelControl_CNM = new Panel();
+            panelFill_CNM = new Panel();
+            panelText_CNM = new Panel();
             groupBoxControl_CNM.SuspendLayout();
             groupBoxMathFunc_CNM.SuspendLayout();
             groupBoxHelp_CNM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOutput_CNM).BeginInit();
+            panelControl_CNM.SuspendLayout();
+            panelFill_CNM.SuspendLayout();
+            panelText_CNM.SuspendLayout();
             SuspendLayout();
             // 
             // groupBoxControl_CNM
             // 
+            groupBoxControl_CNM.AutoSize = true;
             groupBoxControl_CNM.Controls.Add(buttonCreateFile_CNM);
             groupBoxControl_CNM.Controls.Add(buttonSaveFile_CNM);
             groupBoxControl_CNM.Controls.Add(buttonOpenFile_CNM);
-            groupBoxControl_CNM.Location = new Point(12, 12);
+            groupBoxControl_CNM.Location = new Point(3, 6);
             groupBoxControl_CNM.Name = "groupBoxControl_CNM";
             groupBoxControl_CNM.Size = new Size(272, 121);
             groupBoxControl_CNM.TabIndex = 0;
@@ -112,13 +119,15 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             // 
             // groupBoxMathFunc_CNM
             // 
+            groupBoxMathFunc_CNM.AutoSize = true;
+            groupBoxMathFunc_CNM.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             groupBoxMathFunc_CNM.Controls.Add(buttonCellMean_CNM);
             groupBoxMathFunc_CNM.Controls.Add(buttonCellMin_CNM);
             groupBoxMathFunc_CNM.Controls.Add(buttonCellMax_CNM);
             groupBoxMathFunc_CNM.Controls.Add(buttonCellSum_CNM);
-            groupBoxMathFunc_CNM.Location = new Point(290, 12);
+            groupBoxMathFunc_CNM.Location = new Point(281, 6);
             groupBoxMathFunc_CNM.Name = "groupBoxMathFunc_CNM";
-            groupBoxMathFunc_CNM.Size = new Size(195, 121);
+            groupBoxMathFunc_CNM.Size = new Size(195, 127);
             groupBoxMathFunc_CNM.TabIndex = 2;
             groupBoxMathFunc_CNM.TabStop = false;
             groupBoxMathFunc_CNM.Text = "Математика";
@@ -169,8 +178,12 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             // 
             // groupBoxHelp_CNM
             // 
+            groupBoxHelp_CNM.Anchor = AnchorStyles.Right;
+            groupBoxHelp_CNM.AutoSize = true;
+            groupBoxHelp_CNM.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             groupBoxHelp_CNM.Controls.Add(buttonHelp_CNM);
-            groupBoxHelp_CNM.Location = new Point(491, 12);
+            groupBoxHelp_CNM.Location = new Point(569, 6);
+            groupBoxHelp_CNM.MinimumSize = new Size(93, 121);
             groupBoxHelp_CNM.Name = "groupBoxHelp_CNM";
             groupBoxHelp_CNM.Size = new Size(93, 121);
             groupBoxHelp_CNM.TabIndex = 3;
@@ -194,9 +207,10 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             // 
             dataGridViewOutput_CNM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewOutput_CNM.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOutput_CNM.Location = new Point(12, 139);
+            dataGridViewOutput_CNM.Dock = DockStyle.Fill;
+            dataGridViewOutput_CNM.Location = new Point(0, 0);
             dataGridViewOutput_CNM.Name = "dataGridViewOutput_CNM";
-            dataGridViewOutput_CNM.Size = new Size(572, 462);
+            dataGridViewOutput_CNM.Size = new Size(659, 524);
             dataGridViewOutput_CNM.TabIndex = 4;
             dataGridViewOutput_CNM.SelectionChanged += DataGridViewOutput_CNM_SelectionChanged;
             // 
@@ -204,31 +218,67 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             // 
             textBoxCellCount_CNM.BackColor = SystemColors.Control;
             textBoxCellCount_CNM.BorderStyle = BorderStyle.None;
-            textBoxCellCount_CNM.Location = new Point(12, 607);
+            textBoxCellCount_CNM.Location = new Point(0, 3);
             textBoxCellCount_CNM.Name = "textBoxCellCount_CNM";
             textBoxCellCount_CNM.ReadOnly = true;
             textBoxCellCount_CNM.Size = new Size(572, 16);
             textBoxCellCount_CNM.TabIndex = 5;
-            textBoxCellCount_CNM.TextAlign = HorizontalAlignment.Right;
+            // 
+            // panelControl_CNM
+            // 
+            panelControl_CNM.AutoSize = true;
+            panelControl_CNM.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panelControl_CNM.Controls.Add(groupBoxControl_CNM);
+            panelControl_CNM.Controls.Add(groupBoxMathFunc_CNM);
+            panelControl_CNM.Controls.Add(groupBoxHelp_CNM);
+            panelControl_CNM.Dock = DockStyle.Top;
+            panelControl_CNM.Location = new Point(0, 0);
+            panelControl_CNM.Name = "panelControl_CNM";
+            panelControl_CNM.Size = new Size(665, 136);
+            panelControl_CNM.TabIndex = 6;
+            // 
+            // panelFill_CNM
+            // 
+            panelFill_CNM.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelFill_CNM.Controls.Add(dataGridViewOutput_CNM);
+            panelFill_CNM.Location = new Point(3, 139);
+            panelFill_CNM.Name = "panelFill_CNM";
+            panelFill_CNM.Size = new Size(659, 524);
+            panelFill_CNM.TabIndex = 7;
+            // 
+            // panelText_CNM
+            // 
+            panelText_CNM.AutoSize = true;
+            panelText_CNM.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panelText_CNM.Controls.Add(textBoxCellCount_CNM);
+            panelText_CNM.Location = new Point(0, 681);
+            panelText_CNM.Name = "panelText_CNM";
+            panelText_CNM.Size = new Size(575, 22);
+            panelText_CNM.TabIndex = 8;
             // 
             // FormMain_CNM
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(602, 645);
-            Controls.Add(textBoxCellCount_CNM);
-            Controls.Add(dataGridViewOutput_CNM);
-            Controls.Add(groupBoxHelp_CNM);
-            Controls.Add(groupBoxMathFunc_CNM);
-            Controls.Add(groupBoxControl_CNM);
+            ClientSize = new Size(665, 703);
+            Controls.Add(panelText_CNM);
+            Controls.Add(panelFill_CNM);
+            Controls.Add(panelControl_CNM);
+            MinimumSize = new Size(623, 742);
             Name = "FormMain_CNM";
             Text = "Спринт 7 | Проект | Вариант 2 | Чугин Н.М.";
+            Load += FormMain_CNM_Load_1;
             groupBoxControl_CNM.ResumeLayout(false);
             groupBoxControl_CNM.PerformLayout();
             groupBoxMathFunc_CNM.ResumeLayout(false);
             groupBoxHelp_CNM.ResumeLayout(false);
             groupBoxHelp_CNM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOutput_CNM).EndInit();
+            panelControl_CNM.ResumeLayout(false);
+            panelControl_CNM.PerformLayout();
+            panelFill_CNM.ResumeLayout(false);
+            panelText_CNM.ResumeLayout(false);
+            panelText_CNM.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -254,5 +304,8 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
         private Button buttonCellSum_CNM;
         private Button buttonCellMean_CNM;
         private TextBox textBoxCellCount_CNM;
+        private Panel panelControl_CNM;
+        private Panel panelFill_CNM;
+        private Panel panelText_CNM;
     }
 }

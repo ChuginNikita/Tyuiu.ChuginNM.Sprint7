@@ -84,6 +84,8 @@
             ClientSize = new Size(459, 134);
             Controls.Add(textBoxFishBox_CNM);
             Controls.Add(groupBoxAbout_CNM);
+            MaximumSize = new Size(475, 173);
+            MinimumSize = new Size(475, 173);
             Name = "FormAbout_CNM";
             Text = "О программе";
             groupBoxAbout_CNM.ResumeLayout(false);

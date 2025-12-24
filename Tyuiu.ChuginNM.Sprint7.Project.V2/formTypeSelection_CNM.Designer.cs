@@ -126,7 +126,9 @@
             Controls.Add(buttonSelectCancel_CNM);
             Controls.Add(buttonSelectOK_CNM);
             Controls.Add(groupBox1);
-            Name = "Выбор таблицы";
+            MaximumSize = new Size(356, 192);
+            MinimumSize = new Size(356, 192);
+            Name = "formTypeSelection_CNM";
             Text = "Создание файла";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

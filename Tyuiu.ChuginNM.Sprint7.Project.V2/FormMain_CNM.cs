@@ -18,7 +18,8 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             if (!(dataGridViewOutput_CNM.Rows.Count == 0))
             {
                 SaveDataGridViewToCSV(dataGridViewOutput_CNM);
-            } else { MessageBox.Show("Таблица пуста и/или несуществует.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+            }
+            else { MessageBox.Show("Таблица пуста и/или несуществует.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
 
         }
 
@@ -43,12 +44,12 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
                     filePath = openFileDialog.FileName;
                 }
 
-                
+
             }
 
-            if (filePath != string.Empty) { MatrixToGrid(dataGridViewOutput_CNM, DataService.GetMatrix(filePath));  }
+            if (filePath != string.Empty) { MatrixToGrid(dataGridViewOutput_CNM, DataService.GetMatrix(filePath)); }
 
-            
+
 
         }
 
@@ -79,7 +80,7 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
         {
             CellMinMax(dataGridViewOutput_CNM, "max");
         }
-        
+
         private void ButtonHelp_CNM_Click(object sender, EventArgs e)
         {
             FormAbout_CNM run = new FormAbout_CNM();
@@ -93,7 +94,8 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
             if (selectedCellCount > 1)
             {
                 textBoxCellCount_CNM.Text = $"Выделено ячеек: {selectedCellCount}";
-            } else { textBoxCellCount_CNM.Clear(); }
+            }
+            else { textBoxCellCount_CNM.Clear(); }
         }
 
 
@@ -487,6 +489,11 @@ namespace Tyuiu.ChuginNM.Sprint7.Project.V2
                                "Информация",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void FormMain_CNM_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
